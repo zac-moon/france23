@@ -62,7 +62,7 @@
     </style>
 </head>
 <body>
-    <div class="peach-container">
+    <div class="peach-container"onclick=scrollToTop()>
         <img src="imgs/peachFavicon.ico" alt="Peach Emoji" class="peach-image">
         <div class="peach-text">La Fête Du Pêche</div>
     </div>
@@ -90,4 +90,13 @@
     </div>
     <br><br><br><img id="backOfHousePic" src="imgs/backofhouse.jpeg" alt="A grassy back garden with trees and a tent, with people sitting outside it."width="100%">
     <br><br>
+    <script>
+        function scrollToTop() {
+            // Scroll to the top of the page with smooth scrolling
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
