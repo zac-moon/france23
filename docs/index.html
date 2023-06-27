@@ -27,15 +27,29 @@
         p {
             font-size:140%;
         }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+        }
+        .image-grid img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        #backOfHousePic {
+            
+        }
     </style>
 </head>
 <body>
-    <h1 align = "center"><b><u>LA FETE DE LA PECHE</u></b></h1>
-    <h4 align ="center"><b><i>Running Up That Hill...</i></b></h4>
+    <h1 align="center"><b><u>LA FETE DE LA PECHE</u></b></h1>
+    <h4 align="center"><b><i>Running Up That Hill...</i></b></h4>
     <br><br><br><br>
-    <h3 align = "center">WHATS ON</h3>
+    <h3 align="center">WHATS ON</h3>
     <div id="activityCont">
-        <p>Go Karting,Acro Givry,Acro Branch and many more!<br>Swimming in our pool,barbeques,and lots more!</p>
+        <p>Go Karting, Acro Givry, Acro Branch, and many more!<br>Swimming in our pool, barbeques, and lots more!</p>
         <h4></h4>
     </div>
     <br><br><br><br><br>
@@ -46,7 +60,12 @@
     <p align="center">2 Impasse Du Plain (or Le Plain), 71460 Saint-Clément-sur-Guye, France <br><a href="https://goo.gl/maps/Yv28n9UfJTyssMaL7">Google Maps Link</a></p>
     <br><br><br><br><br>
     <h3 align="center">GALLERY</h3>
-    <img src="imgs/viewontohouse.jpeg" alt="View onto front of Main House"width="50%" height="400">
-    <p>•A view onto the front of the house from the driveway.</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="image-grid">
+        <img src="imgs/viewontohouse.jpeg" alt="View onto front of Main House">
+        <img src="imgs/garden1.jpeg" alt="Garden with swing and flowers, green, vibrant.">
+        <img src="imgs/cowHeadPecheFete.jpeg" alt="A cow stckking its head out of a bush next to a grassy field">
+        <img src="imgs/armchairsontogarden.jpeg" alt="Some armchairs lookikng out onto a very sunny garden with trees and lavender.">
+    </div>
+    <br><br><br><img id="backOfHousePic" src="imgs/backofhouse.jpeg" alt="A grassy back garden with trees and a tent, with people sitting outside it."width="100%">
+    <br><br>
 </body>
