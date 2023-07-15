@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <link rel="icon" type="image/png" href="imgs/peachFavicon.ico">
     <title>La Fete De La Peche</title>
@@ -6,6 +7,8 @@
         body { 
             background-color:#cf7535;
             font-family: sans-serif;
+            margin: 0;
+            padding-top: 100px;
         }
         h1 {
             font-size: 600%;
@@ -47,25 +50,76 @@
             align-items: center;
             justify-content: center;
             background-color: white;
-            border-radius: 10px; 
+            border-radius: 10px;
+            z-index: 2;
+            padding: 10px;
+            cursor: pointer;
         }
-    
         .peach-image {
             width: 100px;
             height: 100px;
         }
-        
         .peach-text {
             font-size: 20px;
             margin-top: 10px;
         }
+        .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+            background-color: #ffffff;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+        }
+        .topnav a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-decoration: none;
+            color: #000000;
+            transition: all 0.3s ease-in-out;
+        }
+        .topnav img {
+            width: 30px;
+            height: 30px;
+        }
+        .topnav a:hover,
+        .topnav a:focus {
+            background-color: #e8e8e8;
+        }
+        .topnav a:active {
+            background-color: #d8d8d8;
+        }
+        @media (max-width: 600px) {
+            .topnav {
+                height: 80px;
+            }
+            .topnav img {
+                width: 40px;
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="peach-container"onclick=scrollToTop()>
+    <div class="peach-container" onclick="scrollToTop()">
         <img src="imgs/peachFavicon.ico" alt="Peach Emoji" class="peach-image">
         <div class="peach-text">La Fête De La Pêche</div>
     </div>
+
+    <!-- Navigation bar -->
+    <div class="topnav">
+        <a href="#weather"><img src="imgs/weathericon.png" alt="Weather Icon"></a>
+        <a href="#mapsEmbed"><img src="imgs/locationicon.png" alt="Location Icon"></a>
+        <a href="#gallery"><img src="imgs/galleryicon.png" alt="Gallery Icon"></a>
+    </div>
+
     <br><br><br><br><br><h1 align="center"><b><u>LA FETE DE LA PECHE</u></b></h1>
     <h4 align="center"><b><i>Running Up That Hill...</i></b></h4>
     <br><br><br><br>
@@ -89,12 +143,12 @@
       </script>
     </div>
     <br><br><br><br>
-    <h3 align="center">GALLERY</h3>
+    <h3 align="center" id="gallery">GALLERY</h3>
     <div class="image-grid">
         <img src="imgs/viewontohouse.jpeg" alt="View onto front of Main House">
         <img src="imgs/garden1.jpeg" alt="Garden with swing and flowers, green, vibrant.">
-        <img src="imgs/cowHeadPecheFete.jpeg" alt="A cow stckking its head out of a bush next to a grassy field">
-        <img src="imgs/armchairsontogarden.jpeg" alt="Some armchairs lookikng out onto a very sunny garden with trees and lavender.">
+        <img src="imgs/cowHeadPecheFete.jpeg" alt="A cow sticking its head out of a bush next to a grassy field">
+        <img src="imgs/armchairsontogarden.jpeg" alt="Some armchairs looking out onto a very sunny garden with trees and lavender.">
     </div>
     <br><br><br><img id="backOfHousePic" src="imgs/backofhouse.jpeg" alt="A grassy back garden with trees and a tent, with people sitting outside it."width="100%">
     <br><br>
@@ -108,3 +162,4 @@
         }
     </script>
 </body>
+</html>
